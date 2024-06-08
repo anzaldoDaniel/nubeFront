@@ -1,0 +1,21 @@
+<div class="formularioCrear">
+<form [formGroup] = "formulario" (ngSubmit)="enviar()">
+    
+    <div>
+      <label for="Titulo" class="form-label">Titulo</label>
+      <input type="text" class="form-control" id="Titulo" formControlName="Titulo">
+      <div id="emailHelp" class="form-text">Indique un titulo descriptivo del proyecto/tarea</div>
+
+      <label for="Descripcion" class="form-label">Descripción</label>
+      <input type="text" class="form-control" id="Descripcion" formControlName="Descripcion" maxLength="200">
+      <br>
+      <label for="Asignado" class="form-label">Asignado a: </label>
+      <input type="text" class="form-control" id="Asignado" formControlName="Asignado">
+      <br>
+      <label for="FechaFin" class="form-label">Fecha fin: </label>
+      <input type="text" class="form-control" id="FechaFin" formControlName="FechaFin" maxLength="10">
+      <br>
+    </div>
+    <button type="submit" class="btn btn-primary">Crear</button>
+  </form>
+</div>
