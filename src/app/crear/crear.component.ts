@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'; //agregado
 import { NgClass } from '@angular/common';
+import { Tarea } from '../../models/tarea';
+import { ApiTareasService } from '../../services/api-tareas.service';
 
 @Component({
   selector: 'app-crear',
@@ -16,16 +18,16 @@ usuarioActivo = {
   descripcion: '',
   asignado: '',
   fecha_fin: '',
-  estado: 'En proceso' //chequear con la base como lo tiene definido
+  estado: 'En proceso'
 }
 
-constructor(private fb:FormBuilder){
+constructor(private fb:FormBuilder, private apiTareasService: ApiTareasService){
   this.formulario = this.fb.group({
     titulo: ['', Validators.required],
     descripcion: ['', Validators.required],
     asignado: ['', Validators.required],
     fecha_fin: ['', Validators.required],
-    estado: ['', Validators.required]
+    estado: [{ value: 'En proceso', disabled: true }, Validators.required]
   })
 }
 
@@ -33,12 +35,30 @@ ngOnInit(): void {
   this.formulario.patchValue({    
     Estado: this.usuarioActivo.estado
   })
-
   this.formulario.get('estado')?.disable();
+
+
 }
 
 enviar(){
-console.log(this.formulario.value)
+console.log(this.formulario.value);
+if (this.formulario.valid) {
+  const nuevaTarea: Tarea = {
+    _id: null,
+    titulo: this.formulario.value.titulo,
+    descripcion: this.formulario.value.descripcion,
+    asignado: this.formulario.value.asignado,
+    fecha_fin: new Date(this.formulario.value.fecha_fin),
+    estado: this.usuarioActivo.estado // Obtener el valor del estado correctamente
+  };
+  
+  this.apiTareasService.createTarea(nuevaTarea).subscribe(response => {
+    console.log('Tarea creada:', response);
+    // Aquí podrías redirigir al usuario, mostrar un mensaje, etc.
+  }, error => {
+    console.error('Error al crear la tarea:', error);
+  });
+}
 }
 
 tieneErrores(control: string, error:string){

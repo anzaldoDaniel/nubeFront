@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CrearComponent } from './crear/crear.component';
@@ -13,7 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms'; // para que funcione el fo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule // para que funcione el formulario
+    ReactiveFormsModule, // para que funcione el formulario
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

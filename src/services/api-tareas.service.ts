@@ -18,4 +18,8 @@ export class ApiTareasService {
   getTareaById(id: string){
     return this.http.get<Tarea[]>(`${this.apiUrl}/api/tareas/${id}`);
   }
+
+  createTarea(tarea: Tarea){
+    return this.http.post<Tarea>(`${this.apiUrl}/api/tareas`, tarea);
+  }
 }

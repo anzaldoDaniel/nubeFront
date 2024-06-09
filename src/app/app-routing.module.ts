@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CrearComponent } from './crear/crear.component';
 
 const routes: Routes = [
-    {path:'crear', component:CrearComponent} //verificar que no tenga conflicto
+    {path:'crear', component:CrearComponent}
 ];
 
 @NgModule({
