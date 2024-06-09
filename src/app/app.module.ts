@@ -17,7 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     InicioComponent,
-    TareaCardComponent
+    TareaCardComponent,
     CrearComponent
   ],
   imports: [
