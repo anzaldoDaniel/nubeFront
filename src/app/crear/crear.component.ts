@@ -12,6 +12,7 @@ import { ApiTareasService } from '../../services/api-tareas.service';
 export class CrearComponent implements OnInit{
 
 formulario: FormGroup
+alerta = false
 
 usuarioActivo = {
   titulo: '',
@@ -54,7 +55,8 @@ if (this.formulario.valid) {
   
   this.apiTareasService.createTarea(nuevaTarea).subscribe(response => {
     console.log('Tarea creada:', response);
-    // Aquí podrías redirigir al usuario, mostrar un mensaje, etc.
+    this.alerta = true
+    setTimeout(()=>{this.alerta = false},5000);
   }, error => {
     console.error('Error al crear la tarea:', error);
   });
