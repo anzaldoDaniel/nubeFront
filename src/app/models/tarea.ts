@@ -1,5 +1,5 @@
 export class Tarea{
-    private _id: any;
+    _id: any;
     titulo: string;
     descripcion: string;
     asignado: string;
@@ -12,9 +12,5 @@ export class Tarea{
         this.asignado = "";
         this.fecha_fin = new Date();
         this.estado = "";
-    }
-
-    public getId(){
-        return this._id;
     }
 }
