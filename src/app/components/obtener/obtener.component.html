@@ -1,0 +1,11 @@
+<h2>Tareas</h2>
+<ul>
+  <li *ngFor="let tarea of tareas">
+    <h3>{{ tarea.titulo }}</h3>
+    <p>Descripción: {{ tarea.descripcion }}</p>
+    <p>Asignado a: {{ tarea.asignado }}</p>
+    <p>Fecha de fin: {{ tarea.fecha_fin }}</p>
+    <p>Estado: {{ tarea.estado }}</p>
+    <a [routerLink]="['/editar', tarea._id]">Editar</a>
+  </li>
+</ul>
