@@ -19,8 +19,7 @@ import { EditarComponent } from './editar/editar.component';
     AppComponent,
     InicioComponent,
     TareaCardComponent,
-    CrearComponent,
-    EditarComponent
+    CrearComponent
   ],
   imports: [
     BrowserModule,
