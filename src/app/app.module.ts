@@ -11,6 +11,7 @@ import { DatePipe } from '@angular/common';
 
 import { CrearComponent } from './crear/crear.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditarComponent } from './editar/editar.component';
 
 
 @NgModule({
@@ -18,13 +19,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     InicioComponent,
     TareaCardComponent,
-    CrearComponent
+    CrearComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    EditarComponent,
     HttpClientModule
   ],
   providers: [DatePipe],

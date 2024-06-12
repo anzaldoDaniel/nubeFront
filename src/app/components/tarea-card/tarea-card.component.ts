@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { Tarea } from 'src/app/models/tarea';
+import { Tarea } from '../../models/tarea';
 import { DatePipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tarea-card',
@@ -11,7 +12,7 @@ export class TareaCardComponent {
   @Input() tarea: Tarea = new Tarea();
   fechaFin: string = "";
 
-  constructor(private datePipe: DatePipe){}
+  constructor(private datePipe: DatePipe, private ruta: Router){}
 
   ngOnInit(){
     this.fechaFin = this.formatearFecha(this.tarea.fecha_fin);
@@ -38,4 +39,7 @@ export class TareaCardComponent {
     }
   }
 
+  editarTarea() {
+    this.ruta.navigate(['/editar', this.tarea._id]);
+  }
 }

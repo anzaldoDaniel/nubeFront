@@ -8,5 +8,6 @@
         <li class="list-group-item d-flex justify-content-between"><span class="text-primary fw-bold">Fecha final: </span>{{fechaFin}}</li>
         <li class="list-group-item text-center"><span [ngClass]="cambiarColorEstado(tarea.estado)" class="fw-bold fs-4">{{tarea.estado}}</span></li>
       </ul>
+      <button (click)="editarTarea()">Editar tarea</button>
     </div>
 </div>
