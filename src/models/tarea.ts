@@ -14,4 +14,3 @@ export class Tarea{
         this.estado = "";
     }
 }
-
