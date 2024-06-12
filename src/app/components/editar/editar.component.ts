@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Tarea } from '../../models/tarea';
+import { Tarea } from '../../../models/tarea';
 import { CommonModule } from '@angular/common';
 import { ApiTareasService } from '../../services/api-tareas.service';
 import { FormsModule } from '@angular/forms';

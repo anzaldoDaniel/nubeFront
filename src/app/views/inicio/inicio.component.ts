@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Tarea } from 'src/app/models/tarea';
-import { ApiTareasService } from '../../../services/api-tareas.service';
+import { ApiTareasService } from 'src/app/services/api-tareas.service';
+
 
 @Component({
   selector: 'app-inicio',

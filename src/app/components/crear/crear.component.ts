@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'; //agregado
 import { NgClass } from '@angular/common';
-import { Tarea } from '../../models/tarea';
+import { Tarea } from '../../../models/tarea';
 import { ApiTareasService } from '../../services/api-tareas.service';
 
 @Component({
