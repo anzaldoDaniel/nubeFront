@@ -19,7 +19,8 @@ import { EditarComponent } from './editar/editar.component';
     AppComponent,
     InicioComponent,
     TareaCardComponent,
-    CrearComponent,    
+    CrearComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,8 @@ import { EditarComponent } from './editar/editar.component';
     HttpClientModule,
     ReactiveFormsModule,
     HttpClientModule,
-    EditarComponent    
+    EditarComponent,
+    HttpClientModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

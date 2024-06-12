@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Tarea } from 'src/app/models/tarea';
+import { Tarea } from '../../models/tarea';
 import { DatePipe } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -42,5 +42,4 @@ export class TareaCardComponent {
   editarTarea() {
     this.ruta.navigate(['/editar', this.tarea._id]);
   }
-
 }
