@@ -5,27 +5,32 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
 
-import { InicioComponent } from './screens/inicio/inicio.component';
+
 import { TareaCardComponent } from './components/tarea-card/tarea-card.component';
 import { DatePipe } from '@angular/common';
 
-import { CrearComponent } from './crear/crear.component';
+
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { InicioComponent } from './views/inicio/inicio.component';
+import { CrearComponent } from './components/crear/crear.component';
+import { EditarComponent } from './components/editar/editar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent,
     TareaCardComponent,
-    CrearComponent
+    CrearComponent,
+    TareaCardComponent,
+    TareaCardComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientModule,
+    EditarComponent
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

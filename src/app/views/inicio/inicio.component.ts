@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Tarea } from 'src/app/models/tarea';
 import { ApiTareasService } from 'src/app/services/api-tareas.service';
 
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
