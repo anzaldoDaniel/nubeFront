@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
+import { EliminarTareaComponent } from './components/eliminarTareas/eliminar-tarea/eliminar-tarea.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EliminarTareaComponent
   ],
   imports: [
     BrowserModule,

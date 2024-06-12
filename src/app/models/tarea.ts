@@ -1,5 +1,5 @@
 export class Tarea{
-    private _id: any;
+    public _id: any;
     titulo: string;
     descripcion: string;
     asignado: string;
@@ -18,3 +18,5 @@ export class Tarea{
         return this._id;
     }
 }
+
+
