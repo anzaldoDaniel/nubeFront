@@ -6,9 +6,16 @@
   </div>
 </div>
 
-<div *ngIf="!error" class="bg-dark">
+<div *ngIf="!error">
   <br>
-  <h2 class="m-3 text-white">Tareas</h2>
+  <h2 class="m-3">Tareas</h2>
+  <div class="d-flex justify-content-center">
+    <div class="m-3">
+      <p class="fs-4 fw-bold">Buscar</p>
+      <input class="form-control" type="text" placeholder="Asignado a..." (input)="buscarTarea($event)">
+    </div>
+  </div>
+
   <div *ngIf="cargando" class="d-flex justify-content-center mt-3 text-primary add-container">
       <div class="spinner-border" role="status">
         <span class="visually-hidden">Cargando...</span>
