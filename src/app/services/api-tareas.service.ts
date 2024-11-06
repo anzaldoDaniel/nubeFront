@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ApiTareasService {
 
   //private apiUrl = "http://localhost:3000";
-  private apiUrl = "http://taskflowamplify01-env.eba-hrh5jwpe.us-east-1.elasticbeanstalk.com/";
+  private apiUrl = "taskflowamplify01-env.eba-hrh5jwpe.us-east-1.elasticbeanstalk.com/";
 
   constructor(private http: HttpClient) { }
 
